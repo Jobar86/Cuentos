@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Fabulas"
+            android:icon="@drawable/ic_fabula"
+            android:title="Fabulas" />
+        <item
+            android:id="@+id/nav_Princesas"
+            android:icon="@drawable/ic_princess"
+            android:title="Princesas" />
+        <item
+            android:id="@+id/nav_Para_Dormir"
+            android:icon="@drawable/ic_sleep"
+            android:title="Para Dormir" />
+        <item
+            android:id="@+id/nav_Cuentos_Hadas"
+            android:icon="@drawable/ic_fairy"
+            android:title="Cuentos de Hadas" />
+
+        <item
+            android:id="@+id/nav_Mitos_y_Leyendas"
+            android:icon="@drawable/ic_legends"
+            android:title="Mitos y Leyendas" />
+
+        <item
+        android:id="@+id/nav_Favoritos"
+        android:icon="@drawable/ic_star"
+        android:title="Favoritos" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
