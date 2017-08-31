@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,11 +6,9 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <EditText
-        android:id="@+id/editText3"
+
+    <ListView
+        android:id="@+id/lvfabulas"
         android:layout_width="match_parent"
-        android:layout_height="147dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Aqui va el json con el listview de las fabulas" />
-</FrameLayout>
+        android:layout_height="match_parent" />
+</LinearLayout>
