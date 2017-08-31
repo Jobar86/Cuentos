@@ -19,6 +19,60 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".views.FabulasActivity"
+            android:label="@string/title_activity_fabulas"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jbapps.cuentacuentos.MainActivity" />
+        </activity>
+        <activity
+            android:name=".views.FavoritosActivity"
+            android:label="@string/title_activity_favoritos"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jbapps.cuentacuentos.MainActivity" />
+        </activity>
+        <activity
+            android:name=".views.HadasActivity"
+            android:label="@string/title_activity_hadas"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jbapps.cuentacuentos.MainActivity" />
+        </activity>
+        <activity
+            android:name=".views.LegendsActivity"
+            android:label="@string/title_activity_legends"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jbapps.cuentacuentos.MainActivity" />
+        </activity>
+        <activity
+            android:name=".views.ParaDormirActivity"
+            android:label="@string/title_activity_para_dormir"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jbapps.cuentacuentos.MainActivity" />
+        </activity>
+        <activity
+            android:name=".views.PrincesasActivity"
+            android:label="@string/title_activity_princesas"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jbapps.cuentacuentos.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

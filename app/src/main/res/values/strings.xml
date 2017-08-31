@@ -8,4 +8,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_fabulas">FabulasActivity</string>
+    <string name="title_activity_favoritos">FavoritosActivity</string>
+    <string name="title_activity_hadas">HadasActivity</string>
+    <string name="title_activity_legends">LegendsActivity</string>
+    <string name="title_activity_para_dormir">ParaDormirActivity</string>
+    <string name="title_activity_princesas">PrincesasActivity</string>
 </resources>

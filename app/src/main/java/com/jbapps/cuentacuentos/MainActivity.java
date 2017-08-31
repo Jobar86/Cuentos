@@ -1,9 +1,9 @@
 package com.jbapps.cuentacuentos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import com.jbapps.cuentacuentos.views.FabulasActivity;
+import com.jbapps.cuentacuentos.views.HadasActivity;
+import com.jbapps.cuentacuentos.views.LegendsActivity;
+import com.jbapps.cuentacuentos.views.ParaDormirActivity;
+import com.jbapps.cuentacuentos.views.PrincesasActivity;
 
-import static com.jbapps.cuentacuentos.R.layout.fragment_fabulas;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -38,14 +42,12 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        NavigationView nw = (NavigationView) findViewById(R.id.nav_view);
-        nw.setItemIconTintList(null);
+        navigationView.setItemIconTintList(null);
     }
 
     @Override
@@ -84,31 +86,32 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-        int id = item.getItemId();
+        //Usar switch en lugar de muchos ifs mejora el codigo y lo hace mas entendible
+        switch ( item.getItemId()) {
 
-        FragmentManager fragmentManager=getSupportFragmentManager();
-
-
-        if (id == R.id.nav_Fabulas) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new fabulas()).commit();
-        } else if (id == R.id.nav_Princesas) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new princesas()).commit();
-        } else if (id == R.id.nav_Para_Dormir) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new paradormir()).commit();
-        } else if (id == R.id.nav_Cuentos_Hadas) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new hadas()).commit();
-        } else if (id == R.id.nav_Mitos_y_Leyendas) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new legends()).commit();
-        } else if (id == R.id.nav_Favoritos) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new favoritos()).commit();
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            case R.id.nav_Fabulas:
+                moveTo(FabulasActivity.class);
+                break;
+            case R.id.nav_Princesas:
+                moveTo(PrincesasActivity.class);
+                break;
+            case R.id.nav_Para_Dormir:
+                moveTo(ParaDormirActivity.class);
+                break;
+            case R.id.nav_Cuentos_Hadas:
+                moveTo(HadasActivity.class);
+                break;
+            case R.id.nav_Mitos_y_Leyendas:
+                moveTo(LegendsActivity.class);
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void moveTo(Class activity) {
+        startActivity(new Intent(MainActivity.this, activity));
     }
 }
