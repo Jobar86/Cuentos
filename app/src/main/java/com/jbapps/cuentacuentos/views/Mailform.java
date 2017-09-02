@@ -9,12 +9,12 @@ import android.view.View;
 
 import com.jbapps.cuentacuentos.R;
 
-public class FabulasActivity extends BaseActivity {
+public class Mailform extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fabulas);
+        setContentView(R.layout.activity_mailform);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,9 +26,6 @@ public class FabulasActivity extends BaseActivity {
                         .setAction("Action", null).show();
             }
         });
-
-
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

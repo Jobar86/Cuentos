@@ -14,4 +14,5 @@
     <string name="title_activity_legends">LegendsActivity</string>
     <string name="title_activity_para_dormir">ParaDormirActivity</string>
     <string name="title_activity_princesas">PrincesasActivity</string>
+    <string name="title_activity_mailform">Mailform</string>
 </resources>

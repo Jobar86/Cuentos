@@ -43,11 +43,17 @@
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
+                android:id="@+id/autor"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text="autor"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
                 android:id="@+id/resumen"
                 android:layout_width="match_parent"
-                android:layout_height="114dp"
-                android:text="Resumen"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:layout_height="108dp"
+                android:text="Resumen" />
 
         </LinearLayout>
     </LinearLayout>

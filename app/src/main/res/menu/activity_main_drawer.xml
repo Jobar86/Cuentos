@@ -31,16 +31,17 @@
 
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Interactua">
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:actionProviderClass="android.widget.ShareActionProvider"
+                android:icon="@drawable/ic_share"
+                android:title="Compartir" />
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:icon="@drawable/ic_send"
+                android:title="Envianos tu Cuento" />
         </menu>
     </item>
 

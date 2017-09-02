@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import com.jbapps.cuentacuentos.views.FabulasActivity;
 import com.jbapps.cuentacuentos.views.HadasActivity;
 import com.jbapps.cuentacuentos.views.LegendsActivity;
+import com.jbapps.cuentacuentos.views.Mailform;
 import com.jbapps.cuentacuentos.views.ParaDormirActivity;
 import com.jbapps.cuentacuentos.views.PrincesasActivity;
 
@@ -23,12 +24,14 @@ import com.jbapps.cuentacuentos.views.PrincesasActivity;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +52,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -82,6 +87,8 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -104,6 +111,17 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_Mitos_y_Leyendas:
                 moveTo(LegendsActivity.class);
                 break;
+
+            case R.id.nav_send:
+                moveTo(Mailform.class);
+                break;
+
+            case R.id.nav_share:
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("text/plain");
+                share.putExtra(Intent.EXTRA_TEXT, "Hey check out my app at: https://play.google.com/store/apps/details?id=com.google.android.apps.plus");
+                startActivity(Intent.createChooser(share, "Ayudanos a Compartir"));
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -115,3 +133,4 @@ public class MainActivity extends AppCompatActivity
         startActivity(new Intent(MainActivity.this, activity));
     }
 }
+

@@ -73,6 +73,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.jbapps.cuentacuentos.MainActivity" />
         </activity>
+        <activity
+            android:name=".views.Mailform"
+            android:label="@string/title_activity_mailform"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
