@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.jbapps.cuentacuentos.views.Mailform">
+    android:orientation="vertical"
+    tools:context="com.jbapps.cuentacuentos.views.MailformActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,6 +22,39 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tu Correo"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/et_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Titulo del Cuento" />
+
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textImeMultiLine"
+        android:gravity="left"
+        android:hint="Escribe Aqui tu Cuento" />
+
+    <Button
+        android:id="@+id/b_send"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="Enviar" />
+
     <include layout="@layout/content_mailform" />
 
     <android.support.design.widget.FloatingActionButton
@@ -31,4 +65,4 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

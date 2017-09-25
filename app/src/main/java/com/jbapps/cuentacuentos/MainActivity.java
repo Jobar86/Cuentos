@@ -14,9 +14,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.jbapps.cuentacuentos.views.FabulasActivity;
+import com.jbapps.cuentacuentos.views.FavoritosActivity;
 import com.jbapps.cuentacuentos.views.HadasActivity;
 import com.jbapps.cuentacuentos.views.LegendsActivity;
-import com.jbapps.cuentacuentos.views.Mailform;
+import com.jbapps.cuentacuentos.views.MailformActivity;
 import com.jbapps.cuentacuentos.views.ParaDormirActivity;
 import com.jbapps.cuentacuentos.views.PrincesasActivity;
 
@@ -112,8 +113,12 @@ public class MainActivity extends AppCompatActivity
                 moveTo(LegendsActivity.class);
                 break;
 
+            case R.id.nav_Favoritos:
+                moveTo(FavoritosActivity.class);
+                break;
+
             case R.id.nav_send:
-                moveTo(Mailform.class);
+                moveTo(MailformActivity.class);
                 break;
 
             case R.id.nav_share:
